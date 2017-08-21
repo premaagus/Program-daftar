@@ -1,0 +1,70 @@
+@charset "utf-8";
+/* CSS Document */
+
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
+.container
+{
+	width: 80%;
+	height: auto;
+	margin: auto;
+}
+
+.kotak
+{
+	width: 40%;
+	height: 400px;
+	background: #04152D;
+	margin: auto;
+	margin-top: 50px;
+	text-align: center;
+	padding-top: 50px;
+}
+
+.kotak h3
+{
+	color: #C1C1C1;
+}
+
+.kotak h1
+{
+	color: #F4F4F4;
+	margin-bottom: 100px;
+}
+
+.kotak p
+{
+	margin: 20px 0px;
+	color: #5E5E5E
+}
+
+.tombol
+{
+	width: 80%;
+	height: 50px;
+	background: #000A1E;
+	margin: auto;
+}
+
+.tombol a
+{
+	width: 100%;
+	height: 100%;
+	line-height: 50px;
+	color: #CBCBCB;
+	font-size: 20px;
+	background: #000A1E;
+	text-decoration: none;
+	float: left;
+	transition: 0.2s ease;
+}
+
+.tombol a:hover
+{
+	background: #082A6F;
+	color: white;
+}

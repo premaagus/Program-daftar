@@ -1,0 +1,47 @@
+@charset "utf-8";
+/* CSS Document */
+
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
+.container
+{
+	width: 80%;
+	height: auto;
+	margin: auto;
+}
+
+table
+{
+	width: 80%;
+	text-align: center;
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin: auto;
+}
+
+th
+{
+	border: 1px solid #162745;
+	color: #313131
+}
+
+td
+{
+	border: 1px solid #cccccc;
+	height: 30px;
+}
+
+th
+{
+	background: #0D162D;
+	height: 30px;
+	font-weight: bold;
+	color: #CCCCCC;
+}
+
+tr:nth-child(even) td { background: #F1F1F1; }
+tr:nth-child(odd) td { background: #FEFEFE; }
