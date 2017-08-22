@@ -2,47 +2,61 @@
 <html>
 <head>
 	<title>Formulir Pendaftaran Siswa Baru | SMK Coding</title>
+	<link rel="stylesheet" href="Css/daftar.css">
 </head>
 
 <body>
-	<header>
-		<h3>Formulir Pendaftaran Siswa Baru</h3>
-	</header>
 
-	<form action ="proses-pendaftaran.php" method="POST">
-
-		<fieldset>
-
-		<p>
-			<label for="nama">Nama: </label>
-			<input type="text" name="nama" placeholder="nama lengkap" />
-		</p>
-		<p>
-			<label for="alamat">Alamat: </label>
-			<textarea name="alamat"></textarea>
-		</p>
-		<p>
-			<label for="jenis_kelamin">Jenis Kelamin: </label>
-			<label><input type="radio" name="jenis_kelamin" value="laki-laki"> Laki-laki</label>
-			<label><input type="radio" name="jenis_kelamin" value="perempuan"> Perempuan</label>
-		</p>
-		<p>
-			<label for="agama">Agama: </label>
-			<select name="agama">
-				<option>Islam</option>
-				<option>Kristen</option>
-				<option>Hindu</option>
-				<option>Budha</option>
-				<option>Atheis</option>
-			</select>
-		</p>
-		<p>
-			<input type="submit" value="Daftar" name="daftar" />
-		</p>
-
-		</fieldset>
-
+	<div class="wrapper">
+		<form action="proses-pendaftaran.php" method="post"> 
+		<table>
+			<tr>
+				<td colspan="3"><h3>Formulir Pendaftaran Siswa Baru</h3></td>
+			</tr>
+			<tr>
+				<td>Nama Lengkap</td>
+				<td> : </td>
+				<td><input type="text" name="nama" placeholder="Nama Lengkap" class="text"></td>
+			</tr>
+			<tr>
+				<td>Alamat</td>
+				<td> : </td>
+				<td><input type="text" name="alamat" placeholder="Alamat Rumah" class="text"></td>
+			</tr>
+			<tr>
+				<td>Asal Sekolah</td>
+				<td> : </td>
+				<td><input type="text" name="sekolah_asal" placeholder="Asal sekolah" class="text"></td>
+			</tr>
+			<tr>
+				<td>Jenis Kelamin</td>
+				<td> : </td>
+				<td>
+					<input type="radio" name="jenis_kelamin" value="Laki-laki">Laki-laki
+					<input type="radio" name="jenis_kelamin" value="Laki-laki">Perempuan
+				</td>
+			</tr>
+			<tr>
+				<td>Agama</td>
+				<td> : </td>
+				<td>
+					<select name="agama">
+						<option>Islam</option>
+						<option>Hindu</option>
+						<option>Kristen</option>
+						<option>Katolik</option>
+						<option>Budha</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><button type="submit" value="daftar" name="daftar">Kirim</button></td>
+			</tr>
+		</table>
 	</form>
+	</div>
 
 	</body>
 </html>

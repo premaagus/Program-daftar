@@ -1,14 +1,33 @@
 <?php
 
-$server = "localhost";
-$user = "root";
-$password = "";
-$nama_database = "pendaftaran_siswa";
+include("config.php");
 
-$db = mysqli_connect($server, $user, $password, $nama_database);
+// cek apakah tombol daftar sudah diklik atau blum?
+if(isset($_POST['daftar'])){
 
-if( !$db ){
-	die("gagal Terhubung dengan database" . mysqli_connect_error());
+	// ambil data dari formulir
+	$nama = $_POST['nama'];
+	$alamat = $_POST['alamat'];
+	$jk = $_POST['jenis_kelamin'];
+	$agama = $_POST['agama'];
+	$sekolah = $_POST['sekolah_asal'];
+
+	// buat query
+	$sql = "INSERT INTO calon_siswa (nama, alamat, jenis_kelamin, agama, sekolah_asal) VALUE ('$nama', '$alamat', '$jk', '$agama', '$sekolah')";
+	$query = mysqli_query($db, $sql);
+
+	// apakah query simpan berhasil?
+	if( $query ) {
+		// kalau berhasil alihkan ke halaman index.php dengan status=sukses
+		header('Location: index.php?status=sukses');
+	} else {
+		// kalau gagal alihkan ke halaman indek.php dengan status=gagal
+		header('Location: index.php?status=gagal');
+	}
+
+
+} else {
+	die("Akses dilarang...");
 }
 
 ?>

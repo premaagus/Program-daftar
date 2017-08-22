@@ -19,6 +19,18 @@
 				<div class="tombol">
 					<a href="list-siswa.php">List Siswa</a>
 				</div>
+				<?php if(isset($_GET['status'])): ?>
+					<p>
+						<?php
+							if($_GET['status'] == 'sukses'){
+								echo "Pendaftaran siswa baru berhasil!";
+								} 
+						else {
+								echo "Pendaftaran gagal!";
+							}
+						?>
+	</p>
+<?php endif; ?>
 			</div>
 		</div>
 	</body>
